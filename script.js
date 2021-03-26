@@ -62,7 +62,7 @@ function randomless(arr, number) {
   console.log("---------------");
 }
 randomless(myarr, 2);
-let ODD = [myarr[1], myarr[3], myarr[5]];
+let odd = [myarr[1], myarr[3], myarr[5]];
 let even = [myarr[0], myarr[2], myarr[4]];
 function randomODD(arr, number) {
   if (number == 0) {
@@ -82,6 +82,6 @@ function randomNumberNnHtml(yournumber) {
   document.getElementById(
     "field2"
   ).innerHTML = `The length of the array is :${myarr.length}`;
-  document.getElementById("field3").innerHTML = `The number ODD is : ${ODD}`;
+  document.getElementById("field3").innerHTML = `The number ODD is : ${odd}`;
   document.getElementById("field4").innerHTML = `The number even is : ${even}`;
 }
