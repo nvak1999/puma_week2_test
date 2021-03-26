@@ -7,7 +7,6 @@
 ===> to return any value     : return theValue
 }
 */
-
 /** 
  * Part1 (7)
    Given an array text = ["text 1", "text 2", "text 3","text 4", "text 5"]
@@ -35,3 +34,54 @@
  * Do not create more files. Change all text color into anycolor but black
  * Create another button that create another button that able to make another button
  */
+
+let myarr = ["text 1", "text 2", "text 3", "text 4", "text 5"];
+newLength = myarr.push("end");
+console.log(myarr);
+
+function random(arr) {
+  var i = 0;
+
+  while (i < 6) {
+    var numberRandom = Math.floor(Math.random() * 6);
+    console.log(arr[numberRandom]);
+    i++;
+  }
+  console.log("----------------");
+}
+random(myarr);
+
+function randomless(arr, number) {
+  var x = arr.length;
+  if (number > x) {
+    console.log("Nuber need to less than length of array");
+  } else
+    for (var i = 0; i < number; i++) {
+      console.log(arr[i]);
+    }
+  console.log("---------------");
+}
+randomless(myarr, 2);
+let ODD = [myarr[1], myarr[3], myarr[5]];
+let even = [myarr[0], myarr[2], myarr[4]];
+function randomODD(arr, number) {
+  if (number == 0) {
+    number = Math.floor(Math.random() * 6);
+  }
+  if (number % 2 == 0) {
+    for (var i = 0; i < number; i = i + 2) {
+      console.log(arr[i]);
+    }
+  } else
+    for (var i = 1; i < number; i = i + 2) {
+      console.log(arr[i]);
+    }
+}
+
+function randomNumberNnHtml(yournumber) {
+  document.getElementById(
+    "field2"
+  ).innerHTML = `The length of the array is :${myarr.length}`;
+  document.getElementById("field3").innerHTML = `The number ODD is : ${ODD}`;
+  document.getElementById("field4").innerHTML = `The number even is : ${even}`;
+}
